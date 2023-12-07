@@ -3,7 +3,6 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = current_user.categories
-    
   end
 
   def show
@@ -14,7 +13,7 @@ class CategoriesController < ApplicationController
   def new
     @category = Category.new
   end
-  
+
   def create
     @category = current_user.categories.build(category_params)
 
@@ -24,6 +23,7 @@ class CategoriesController < ApplicationController
       render 'new'
     end
   end
+
   private
 
   def category_params
