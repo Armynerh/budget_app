@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_05_234538) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_06_225125) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,6 +20,15 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_05_234538) do
     t.decimal "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "budget_transactions_categories", force: :cascade do |t|
+    t.bigint "budget_transaction_id", null: false
+    t.bigint "category_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["budget_transaction_id"], name: "index_budget_transactions_categories_on_budget_transaction_id"
+    t.index ["category_id"], name: "index_budget_transactions_categories_on_category_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -42,4 +51,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_05_234538) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "budget_transactions_categories", "budget_transactions"
+  add_foreign_key "budget_transactions_categories", "categories"
 end

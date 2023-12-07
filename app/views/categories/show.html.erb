@@ -1,0 +1,5 @@
+<h1><%= @category.name %></h1>
+<p> <%= image_tag(@category.icon, alt: 'Category Icon') %></p>
+<p>Total Amount: <%= @total_amount %></p>
+
+<%= link_to 'View Transactions', category_budget_transactions_path(@category) %>
