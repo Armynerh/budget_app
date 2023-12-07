@@ -13,12 +13,13 @@ class BudgetTransactionsController < ApplicationController
   end
 
   def new
-    @budget_transaction = @category.budget_transactions.build
+    @budget_transaction = BudgetTransaction.new
   end
 
   def create
-    @budget_transaction = @category.budget_transactions.build(budget_transaction_params)
+    @budget_transaction = BudgetTransaction.new(budget_transaction_params)
     @budget_transaction.user = current_user
+    @budget_transaction.categories << @category
 
     if @budget_transaction.save
       redirect_to category_budget_transactions_path(@category), notice: 'Transaction created successfully!'

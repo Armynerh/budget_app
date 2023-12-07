@@ -7,4 +7,4 @@
 <% end %>
 
 <%= link_to 'Add Transaction', new_category_budget_transaction_path(@category), class: 'btn btn-primary' %>
-<%= link_to 'Back', category_budget_transactions_path(@category) %>
+<%= link_to 'Back', authenticated_root_path(@category) %>
