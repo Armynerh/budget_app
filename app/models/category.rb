@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  has_and_belongs_to_many :users
+  belongs_to :user
   has_many :budget_transactions_categories
   has_many :budget_transactions, through: :budget_transactions_categories
 

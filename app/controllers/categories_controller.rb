@@ -2,7 +2,8 @@ class CategoriesController < ApplicationController
   before_action :authenticate_user!, only: %i[new create]
 
   def index
-    @categories = Category.all
+    @categories = current_user.categories
+    
   end
 
   def show
@@ -13,9 +14,9 @@ class CategoriesController < ApplicationController
   def new
     @category = Category.new
   end
-
+  
   def create
-    @category = Category.new(category_params)
+    @category = current_user.categories.build(category_params)
 
     if @category.save
       redirect_to categories_path, notice: 'Category created successfully!'
@@ -23,7 +24,6 @@ class CategoriesController < ApplicationController
       render 'new'
     end
   end
-
   private
 
   def category_params
