@@ -1,7 +1,7 @@
 # app/controllers/budget_transactions_controller.rb
 class BudgetTransactionsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_category, only: [:index, :new, :create]
+  before_action :set_category, only: %i[index new create]
 
   def index
     @budget_transactions = @category.budget_transactions.order(created_at: :desc)
@@ -33,9 +33,9 @@ class BudgetTransactionsController < ApplicationController
   def set_category
     @category = Category.find_by(id: params[:category_id])
 
-    unless @category
-      redirect_to categories_path, alert: 'Category not found'
-    end
+    return if @category
+
+    redirect_to categories_path, alert: 'Category not found'
   end
 
   def budget_transaction_params
