@@ -1,0 +1,10 @@
+<h1>Transactions for <%= @category_info[:name] %></h1>
+<%= image_tag @category_info[:icon], alt: 'Category Icon' %>
+<p>Total Amount: <%= @total_amount %></p>
+
+<% @budget_transactions.each do |transaction| %>
+  <p><%= transaction.name %> - <%= transaction.amount %></p>
+<% end %>
+
+<%= link_to 'Add Transaction', new_category_budget_transaction_path(@category), class: 'btn btn-primary' %>
+<%= link_to 'Back', authenticated_root_path(@category) %>
