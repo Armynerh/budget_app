@@ -1,15 +1,70 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
+body {
+  font-family: 'Prima Nova', sans-serif;
+  background: #ecedef;
+}
+
+a{
+  text-decoration: none;
+}
+.btn:hover {
+  background-color: #3778c2;
+  color: white;
+}
+
+
+.logo{
+  font-family: 'DM Serif Display', serif;
+  font-size: 120px;
+  margin: 200px 0;
+}
+
+.first-color{
+  color: #434b54;
+}
+
+.second-color{
+  color: #5fb523;
+}
+
+.third-color{
+  color: #3778c2;
+}
+
+.flex{
+  display: flex;
+}
+.flex-col{
+ flex-direction: column;
+}
+.center{
+  align-items: center;
+  text-align: center;
+}
+.justify-between{
+  align-content: space-between;
+}
+
+.btn-primary{
+  font-size: 20px;
+  font-weight: 400;
+}
+.btn{
+  height: 30px;
+  padding: 30px;
+}
+.full-width{
+  width: 80%;
+  margin: auto;
+}
+.form-field{
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 2px solid #ccd1d7;
+  padding: 15px;
+  width: 100%;
+  margin-bottom: 2px;
+  background-color: white;
+}
+

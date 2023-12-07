@@ -69,3 +69,4 @@ group :development do
 end
 gem 'cancancan'
 gem 'devise', '~> 4.9'
+gem "font-awesome-sass"
