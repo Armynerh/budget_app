@@ -72,12 +72,17 @@ a{
 .fuller-width{
   width: 100%;
 }
+.back-div{
+  width:10%;
+
+}
 .back-icon{
- width: 6%;
+ width: 30%;
+ padding: 10px;
 }
 .top-div{
   background: #3778c2;
-  margin: 20px;
+  margin: 20px auto;
 }
 .next-btn{
   border: none;
@@ -91,4 +96,7 @@ a{
   width:94%;
   margin: auto;
   padding: 20px 0;
+}
+.self-center{
+  margin: 30px auto;
 }

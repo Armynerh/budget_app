@@ -15,14 +15,6 @@ https://cdn.jsdelivr.net/npm/font-proxima-nova@1.0.1/style.min.css
   </head>
 
   <body>
-  <% if user_signed_in? %>
-  <div class= "flex">
-<div>Welcome <%= current_user.name %></div>
-  <div>
-  <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete } %>
-  </div>
-  </div>
-<% end %>
     <%= yield %>
   </body>
 </html>

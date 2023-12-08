@@ -1,4 +1,14 @@
-<h1>Transactions for <%= @category_info[:name] %></h1>
+<div class="flex center justify-between top-div">
+  <div class="back-div">
+ <%= link_to controller: 'categories', action: 'index' do %>
+ <%= image_tag('002-back.png', alt: 'Example Image', class:'back-icon') %>
+ <% end %>
+ </div>
+  <h2 class="white btn-primary">TRANSACTIONS</h2>
+  <div class="actions ">
+  </div>
+  </div>
+<h1> <%= @category_info[:name] %></h1>
 <%= image_tag @category_info[:icon], alt: 'Category Icon' %>
 <p>Total Amount: <%= @total_amount %></p>
 

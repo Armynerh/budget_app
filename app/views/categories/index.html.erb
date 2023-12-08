@@ -1,4 +1,14 @@
-<h1>Categories</h1>
+<div class="flex center justify-between top-div">
+  <div class="back-div">
+ <%= image_tag('001-hamburger.png', alt: 'Example Image', class:'back-icon') %>
+ </div>
+  <h2 class="white btn-primary">CATEGORIES</h2>
+  <div class="actions ">
+  <% if user_signed_in? %>
+  <%= link_to "Sign out", destroy_user_session_path, class:"white btn-primary", data: { turbo_method: :delete } %>
+<% end %>
+  </div>
+  </div>
 <% @categories.each do |category| %>
   <div>
     <%= link_to category.name, category_budget_transactions_path(category) %>

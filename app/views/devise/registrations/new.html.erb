@@ -1,11 +1,11 @@
-
-
-
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
   <div class="flex center justify-between top-div">
- <%= image_tag('https://cdn-user-icons.flaticon.com/73194/73194478/1701994675372.svg?token=exp=1701995992~hmac=17e8fe82c3a9f8ae325353fac6ab74ea', alt: 'Example Image', class:'back-icon') %>
+  <div class="back-div">
+  <%= link_to root_url do %>
+ <%= image_tag('002-back.png', alt: 'Example Image', class:'back-icon') %>
+ <% end %>
+ </div>
   <h2 class="white btn-primary">REGISTER</h2>
   <div class="actions ">
     <%= f.submit "Next", class: "next-btn white btn-primary" %>
