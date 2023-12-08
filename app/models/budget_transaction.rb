@@ -1,4 +1,3 @@
-# app/models/budget_transaction.rb
 class BudgetTransaction < ApplicationRecord
   belongs_to :user, foreign_key: 'author_id'
   has_many :budget_transactions_categories

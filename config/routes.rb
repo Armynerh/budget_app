@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   root 'splash#index'
 
   # Categories and Budget Transactions
-  resources :categories, only: [:index, :show, :new, :create] do
+  resources :categories, only: [:index, :new, :create] do
     resources :budget_transactions, only: [:index, :new, :create]
   end
 end
