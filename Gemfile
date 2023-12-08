@@ -70,4 +70,4 @@ end
 gem 'cancancan'
 gem 'devise', '~> 4.9'
 gem 'faker'
-gem "font-awesome-sass", "~> 6.5.1"
+gem 'font-awesome-sass', '~> 6.5.1'

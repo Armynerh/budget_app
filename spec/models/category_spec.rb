@@ -15,15 +15,14 @@ RSpec.describe Category, type: :model do
   describe 'total_amount' do
     it 'calculates the total amount of associated budget transactions' do
       user = create(:user)
-      category = create(:category, user: user)
-      transaction1 = create(:budget_transaction, user: user, amount: 100)
-      transaction2 = create(:budget_transaction, user: user, amount: 150)
+      category = create(:category, user:)
+      transaction1 = create(:budget_transaction, user:, amount: 100)
+      transaction2 = create(:budget_transaction, user:, amount: 150)
 
-      create(:budget_transactions_category, budget_transaction: transaction1, category: category)
-      create(:budget_transactions_category, budget_transaction: transaction2, category: category)
+      create(:budget_transactions_category, budget_transaction: transaction1, category:)
+      create(:budget_transactions_category, budget_transaction: transaction2, category:)
 
       expect(category.total_amount).to eq(250)
     end
   end
-
 end
