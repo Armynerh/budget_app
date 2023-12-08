@@ -1,10 +1,9 @@
-# app/controllers/budget_transactions_controller.rb
 class BudgetTransactionsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_category, only: %i[index new create]
 
   def index
-    @budget_transactions = @category.budget_transactions.order(created_at: :desc)
+    @budget_transactions = @category.budget_transactions.includes(:user).order(created_at: :desc)
     @total_amount = @category.total_amount
     @category_info = {
       name: @category.name,

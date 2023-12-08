@@ -2,13 +2,10 @@ class CategoriesController < ApplicationController
   before_action :authenticate_user!, only: %i[new create]
 
   def index
-    @categories = current_user.categories
+    @categories = current_user.categories.includes(:budget_transactions)
   end
 
-  def show
-    @category = Category.find(params[:id])
-    @total_amount = @category.total_amount
-  end
+  def show; end
 
   def new
     @category = Category.new

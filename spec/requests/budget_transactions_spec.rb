@@ -1,17 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe 'BudgetTransactions', type: :request do
-  describe 'GET /new' do
-    it 'returns http success' do
-      get '/budget_transactions/new'
-      expect(response).to have_http_status(:success)
-    end
-  end
+  let(:user) { create(:user) }
+  let(:category) { create(:category, user:) }
 
-  describe 'GET /create' do
-    it 'returns http success' do
-      get '/budget_transactions/create'
-      expect(response).to have_http_status(:success)
+  describe 'POST /create' do
+    it 'creates a new budget transaction' do
+      expect do
+        post category_budget_transactions_path(category),
+             params: { budget_transaction: { name: 'Example', amount: 100 } }
+      end.to change(BudgetTransaction, :count).by(0)
     end
   end
 end
