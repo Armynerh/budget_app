@@ -126,7 +126,8 @@ To run tests, run the following command:
 
 ### Deployment
 
-  - [N/A]
+  -[Live Demo Link](https://budge-it-6aex.onrender.com/)
+  -[Walkthrough Video Link](https://www.loom.com/share/6ade109d860146ffa9a4eb8e068c4510?sid=2b73d834-abd4-4aeb-926e-f5685f23597d)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -174,6 +175,8 @@ If you like this project please show support by staring ⭐️.
 
 * I would like to give Microverse my sincerest gratitude for accommodating me in the Full-time Software Development program.
 
+* I would like to give credit to Gregoire Vella on Behance for the Original design idea
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
@@ -181,5 +184,7 @@ If you like this project please show support by staring ⭐️.
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
+
+[The Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
