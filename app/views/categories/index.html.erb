@@ -9,11 +9,28 @@
 <% end %>
   </div>
   </div>
+
+
 <% @categories.each do |category| %>
-  <div>
-    <%= link_to category.name, category_budget_transactions_path(category) %>
-       <p> <%= image_tag(category.icon, alt: 'Category Icon') %></p>
-    <p>Total Amount: <%= category.total_amount %></p>
+ <%= link_to category_budget_transactions_path(category) do %>
+<div class="flex center justify-between white-bck">
+  <div class="back-div">
+ <%= image_tag(category.icon, alt: 'Category Icon', class: "back-icon" )%>
+ </div>
+<div class="color-three"><p> <%= category.name %></p></div>
+  <div class="color-three">
+  <p>Total: <%= number_to_currency(category.total_amount, precision: 2, unit: '$') %>
+</p>
   </div>
-<% end %>
-<%= link_to 'Add a new category', new_category_path %>
+  </div>
+
+  <div>
+  <% end %>
+  <% end %>
+    
+       
+    
+  
+
+<div class=" footer-div"><div class="full-width bottom-btn"><%= link_to 'Add a new category', new_category_path, class: 'white btn-primary' %></div></div>
+

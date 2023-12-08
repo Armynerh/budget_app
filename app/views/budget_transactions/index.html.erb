@@ -8,13 +8,27 @@
   <div class="actions ">
   </div>
   </div>
-<h1> <%= @category_info[:name] %></h1>
-<%= image_tag @category_info[:icon], alt: 'Category Icon' %>
-<p>Total Amount: <%= @total_amount %></p>
+
+  <div class="flex center justify-between white-bck">
+  <div class="back-div">
+ <%= image_tag @category_info[:icon], alt: 'Category Icon', class: "back-icon" %>
+ </div>
+<div class="color-three"><p> <%= @category_info[:name] %></p></div>
+  <div class="color-three">
+  <p>Total: <%= number_to_currency(@total_amount, precision: 2, unit: '$') %>
+</p>
+  </div>
+  </div>
 
 <% @budget_transactions.each do |transaction| %>
-  <p><%= transaction.name %> - <%= transaction.amount %></p>
+  <div class="flex center justify-between  white-bck top">
+  <div class="color-three">
+  <%= transaction.name %>
+ </div>
+  <h2 class="color-three"> <%= number_to_currency(transaction.amount, precision: 2, unit: '$') %>
+</h2>
+  </div>
 <% end %>
 
-<%= link_to 'Add Transaction', new_category_budget_transaction_path(@category), class: 'btn btn-primary' %>
-<%= link_to 'Back', authenticated_root_path(@category) %>
+<div class="flex center flex-col footer-div"><div class="full-width bottom-btn"><%= link_to 'Add Transaction', new_category_budget_transaction_path(@category), class: 'white btn-primary' %></div></div>
+

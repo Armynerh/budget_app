@@ -74,7 +74,6 @@ a{
 }
 .back-div{
   width:10%;
-
 }
 .back-icon{
  width: 30%;
@@ -83,6 +82,7 @@ a{
 .top-div{
   background: #3778c2;
   margin: 20px auto;
+  width:100%;
 }
 .next-btn{
   border: none;
@@ -98,5 +98,29 @@ a{
   padding: 20px 0;
 }
 .self-center{
-  margin: 30px auto;
+  margin: 10px auto;
+}
+
+.color-three{
+  font-weight: 300;
+  font-size: 20px;
+  color:#6e7175 ;
+  padding: 10px;
+  margin: 0 20px;
+}
+.top{
+  margin-top: 20px;
+}
+.footer-div{
+  background-color: #5fb523;
+  text-align: center;
+  padding: 30px;
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%; 
+}
+.bottom-btn{
+  border: 1px solid white;
+  padding: 20px;
 }
