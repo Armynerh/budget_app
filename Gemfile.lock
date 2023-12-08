@@ -324,7 +324,7 @@ DEPENDENCIES
   capybara
   devise (~> 4.9)
   factory_bot_rails
-  font-awesome-sass
+  font-awesome-sass (~> 6.5.1)
   importmap-rails
   jbuilder
   kaminari

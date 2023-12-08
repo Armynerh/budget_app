@@ -1,4 +1,4 @@
-
+@import "font-awesome";
 body {
   font-family: 'Prima Nova', sans-serif;
   background: #ecedef;
@@ -31,6 +31,10 @@ a{
   color: #3778c2;
 }
 
+.white{
+  color: #ffffff;
+}
+
 .flex{
   display: flex;
 }
@@ -42,7 +46,7 @@ a{
   text-align: center;
 }
 .justify-between{
-  align-content: space-between;
+  justify-content: space-between;
 }
 
 .btn-primary{
@@ -62,9 +66,29 @@ a{
   border-right: 0;
   border-left: 0;
   border-bottom: 2px solid #ccd1d7;
-  padding: 15px;
-  width: 100%;
-  margin-bottom: 2px;
-  background-color: white;
+  padding: 25px;
 }
 
+.fuller-width{
+  width: 100%;
+}
+.back-icon{
+ width: 6%;
+}
+.top-div{
+  background: #3778c2;
+  margin: 20px;
+}
+.next-btn{
+  border: none;
+  background-color: #3778c2;
+}
+.actions{
+  width: 10%;
+}
+.white-bck{
+  background-color: #ffffff;
+  width:94%;
+  margin: auto;
+  padding: 20px 0;
+}
